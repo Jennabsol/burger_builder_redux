@@ -1,0 +1,30 @@
+{
+  "orders": [
+    {
+      "ingredients": {
+        "cheese": 1,
+        "meat": 1,
+        "salad": 1,
+        "bacon": 1
+      },
+      "price": "6.9",
+      "customer": {
+        "name": "jenna solis",
+        "address": {
+          "street": "112 McGavock Cir",
+          "zipCode": "37064",
+          "country": "USA"
+        },
+        "email": "jennabsol@gmail.com"
+      },
+      "deliveryMethod": "fastest",
+      "id": 1
+    }
+  ],
+  "ingredients": {
+    "cheese": 0,
+    "meat": 0,
+    "salad": 0,
+    "bacon": 0
+  }
+}
