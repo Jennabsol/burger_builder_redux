@@ -14,7 +14,6 @@ class Orders extends Component {
         axios.get('/orders')
             .then(res => res.data)
             .then(orders =>{
-                console.log(orders)
                 this.setState({loading: false, orders: orders});
             })
             .catch(err => {

@@ -21,7 +21,6 @@ class BurgerBuilder extends Component {
 	};
 
 	// componentDidMount() {
-	// 	console.log(this.props);
 	// 	// axios.get( 'ingredients' )
 	// 	//     .then( response => {
 	// 	//         this.setState( { ingredients: response.data } );
@@ -67,9 +66,7 @@ class BurgerBuilder extends Component {
 		) : (
 			<Spinner />
 		);
-		console.log("sp", this.props.ings);
 		if (this.props.ings) {
-			console.log("inside", this.props.ings);
 			burger = (
 				<>
 					<Burger ingredients={this.props.ings} />
