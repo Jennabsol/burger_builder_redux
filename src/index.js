@@ -3,11 +3,12 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
+
 import "index.module.css";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 import reducer from "store/reducer";
-
 
 const logger = (store) => {
 	return (next) => {
@@ -19,7 +20,10 @@ const logger = (store) => {
 		};
 	};
 };
-const store = createStore(reducer, applyMiddleware(logger));
+const store = createStore(
+	reducer,
+	composeWithDevTools(applyMiddleware(logger))
+);
 
 const app = (
 	<Provider store={store}>
